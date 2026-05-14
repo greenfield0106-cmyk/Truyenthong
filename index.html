@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viettel Network - Tiệc Liên Hoan 30/4 & 1/5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --viettel-red: #E30613;
+            --deep-black: #0A0A0A;
+            --neutral-gray: #F2F2F2;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif; /* Fallback for PF BeauSans Pro */
+            scroll-behavior: smooth;
+            background-color: var(--neutral-gray);
+            color: var(--deep-black);
+        }
+
+        .bg-viettel-red { background-color: var(--viettel-red); }
+        .text-viettel-red { color: var(--viettel-red); }
+        .border-viettel-red { border-color: var(--viettel-red); }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)),
+                        url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=2069') center/cover no-repeat;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--viettel-red);
+            color: white;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-2">
+                    <!-- Placeholder Logo Viettel Network -->
+                    <div class="flex items-center font-bold text-2xl tracking-tighter">
+                        <span class="text-viettel-red">VIETTEL</span>
+                        <span class="ml-1 text-gray-800">NETWORK</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wider">
+                    <a href="#thong-tin" class="hover:text-viettel-red transition">Thời gian</a>
+                    <a href="#phan-ca" class="hover:text-viettel-red transition">Phân ca</a>
+                    <a href="#huong-dan" class="hover:text-viettel-red transition">Hướng dẫn</a>
+                    <a href="#lien-he" class="hover:text-viettel-red transition">Liên hệ</a>
+                </div>
+                <div>
+                    <a href="#huong-dan" class="bg-viettel-red text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-red-700 transition shadow-lg">
+                        Đăng ký ngay
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <span class="inline-block px-4 py-1 border border-white/30 rounded-full text-sm font-semibold tracking-widest uppercase mb-6 bg-white/10 backdrop-blur-sm animate-fade-in">
+                CHÀO MỪNG ĐẠI LỄ 30/4 & 1/5
+            </span>
+            <h1 class="text-4xl md:text-7xl font-bold mb-6 leading-tight">
+                TIỆC LIÊN HOAN MỪNG <br> 
+                <span class="text-viettel-red">NGÀY CHIẾN THẮNG</span> & QUỐC TẾ LAO ĐỘNG
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Bữa ăn tăng cường thân mật dành riêng cho toàn thể cán bộ nhân viên Viettel Network nhân dịp kỷ niệm các ngày lễ lớn của đất nước.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#phan-ca" class="bg-viettel-red px-10 py-4 rounded-full font-bold hover:bg-red-700 transition text-lg shadow-xl">
+                    Xem lịch chia ca
+                </a>
+                <a href="#thong-tin" class="bg-white/10 backdrop-blur-md px-10 py-4 rounded-full font-bold hover:bg-white/20 transition text-lg border border-white/20">
+                    Thông tin chi tiết
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Info Cards -->
+    <section id="thong-tin" class="py-24 -mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-xl card-hover flex flex-col items-center text-center">
+                    <div class="p-4 bg-red-50 text-viettel-red rounded-xl mb-6">
+                        <i data-lucide="calendar" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Thời gian</h3>
+                    <p class="text-gray-600">Bữa trưa Thứ 4<br><span class="font-bold text-gray-800">Ngày 29/04/2026</span></p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl card-hover flex flex-col items-center text-center">
+                    <div class="p-4 bg-red-50 text-viettel-red rounded-xl mb-6">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Đối tượng</h3>
+                    <p class="text-gray-600">Toàn thể CBCNV, nhân viên thử việc, tập nghề và đào tạo.</p>
+                </div>
+                <div class="max-w-7xl mx-auto">
+                    <div class="bg-white p-8 rounded-2xl shadow-xl card-hover flex flex-col items-center text-center h-full">
+                        <div class="p-4 bg-red-50 text-viettel-red rounded-xl mb-6">
+                            <i data-lucide="map-pin" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Địa điểm</h3>
+                        <p class="text-gray-600">Tầng 10 Tòa nhà TCT<br>& các đơn vị thực tế.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shift Schedule Section -->
+    <section id="phan-ca" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Cách thức tổ chức tại Tòa nhà TCT</h2>
+                <div class="w-20 h-1.5 bg-viettel-red mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Để đảm bảo không gian thoải mái và phục vụ tốt nhất, bữa trưa được chia làm 02 khung giờ riêng biệt.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex items-start p-6 bg-neutral-gray rounded-2xl border-l-4 border-viettel-red">
+                        <div class="bg-white p-3 rounded-lg shadow-sm mr-6 text-viettel-red font-bold text-xl">10:45</div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Ca Ăn 01</h4>
+                            <p class="text-gray-600">Dành cho các đơn vị: <span class="font-semibold text-gray-800">TTVHKTTC, TTKTTC, BQLDAHTVT.</span></p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-6 bg-neutral-gray rounded-2xl border-l-4 border-gray-400">
+                        <div class="bg-white p-3 rounded-lg shadow-sm mr-6 text-gray-800 font-bold text-xl">12:00</div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Ca Ăn 02</h4>
+                            <p class="text-gray-600">Các Phòng: <span class="font-semibold text-gray-800">ĐT&QLTS, KT, VP, ĐN-HC, CTr, NS, TCKT, PC&KSNB, CNTT và TT NTCN & CĐS.</span></p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-red-50 border border-red-200 rounded-2xl flex items-center gap-4 text-viettel-red">
+                        <i data-lucide="info" class="shrink-0"></i>
+                        <p class="font-medium">Lưu ý: Phòng ĐN-HC không phục vụ ăn sáng vào ngày 29/04/2026.</p>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1974" alt="Canteen View" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Steps -->
+    <section id="huong-dan" class="py-24 bg-neutral-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Hướng dẫn Đăng ký & Thực hiện</h2>
+                <div class="w-20 h-1.5 bg-viettel-red mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                <!-- Step 1 -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm relative z-10 card-hover">
+                    <div class="step-number">1</div>
+                    <h4 class="text-xl font-bold mb-4">Cắt cơm trên App</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Thực hiện cắt cơm trưa ngày 29/04 trên ứng dụng <strong>Viettel Family</strong> để hệ thống ghi nhận.
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm relative z-10 card-hover">
+                    <div class="step-number">2</div>
+                    <h4 class="text-xl font-bold mb-4">Gửi danh sách</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Đầu mối các đơn vị gửi danh sách CBCNV đăng ký ăn trưa về Phòng ĐN-HC trước ngày <strong>28/04/2026</strong>.
+                    </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm relative z-10 card-hover">
+                    <div class="step-number">3</div>
+                    <h4 class="text-xl font-bold mb-4">Tham gia Liên hoan</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Đúng khung giờ đã phân ca, kính mời anh/chị có mặt tại Tầng 10 để cùng chung vui bữa tiệc thân mật.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-viettel-red rounded-[2.5rem] p-12 md:p-20 text-white text-center relative overflow-hidden shadow-2xl">
+                <!-- Abstract Background Elements -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-black/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 relative z-10">Đừng quên đăng ký đúng hạn <br class="hidden md:block"> để bữa tiệc thêm trọn vẹn!</h2>
+                <p class="text-white/80 mb-10 text-lg relative z-10">Hạn cuối đăng ký danh sách đơn vị: <strong>28/04/2026</strong></p>
+                
+                <button class="bg-white text-viettel-red px-12 py-5 rounded-full font-bold text-xl hover:bg-gray-100 transition shadow-2xl relative z-10 flex items-center mx-auto gap-3">
+                    <i data-lucide="smartphone" class="w-6 h-6"></i>
+                    Mở App Viettel Family
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="lien-he" class="bg-white pt-20 pb-10 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Liên hệ hỗ trợ</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="p-3 bg-neutral-gray rounded-full text-viettel-red">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <span class="text-gray-700 font-semibold">Đ/c Phương Văn Chiến (Nhân viên Hậu cần)</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="p-3 bg-neutral-gray rounded-full text-viettel-red">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <a href="tel:0968128232" class="text-gray-700 hover:text-viettel-red transition font-medium">0968.128.232</a>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="p-3 bg-neutral-gray rounded-full text-viettel-red">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <a href="mailto:chienpv1@viettel.com.vn" class="text-gray-700 hover:text-viettel-red transition font-medium">chienpv1@viettel.com.vn</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:text-right">
+                    <div class="inline-block text-left">
+                        <p class="text-gray-500 mb-4 max-w-sm">Phòng Đối ngoại - Hành chính kính chúc toàn thể anh chị em có một bữa ăn ngon miệng và kỳ nghỉ lễ ý nghĩa!</p>
+                        <div class="flex md:justify-end gap-6">
+                            <!-- Social / External placeholders -->
+                            <div class="w-10 h-10 bg-neutral-gray rounded-full hover:bg-viettel-red hover:text-white transition flex items-center justify-center cursor-pointer">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </div>
+                            <div class="w-10 h-10 bg-neutral-gray rounded-full hover:bg-viettel-red hover:text-white transition flex items-center justify-center cursor-pointer">
+                                <i data-lucide="globe" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 pt-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>&copy; 2026 Viettel Network Corporation. All rights reserved.</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-viettel-red">Chính sách bảo mật</a>
+                    <a href="#" class="hover:text-viettel-red">Quy định nội bộ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scroll adjustment for sticky nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
